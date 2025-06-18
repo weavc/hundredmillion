@@ -27,7 +27,7 @@ func main() {
 
 	w := bufio.NewWriter(f)
 
-	for i := 0; i < n; i++ {
+	for range n {
 		_, err := w.WriteString(g.generateLine())
 		if err != nil {
 			fmt.Print(err)
