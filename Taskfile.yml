@@ -1,0 +1,18 @@
+# https://taskfile.dev
+
+version: '3'
+
+tasks:
+  build:
+    cmds:
+    - go build -o bin/generate ./generate
+
+  generate:
+    deps: [build]
+    cmds:
+    - ./bin/generate
+
+  report:
+    deps: [build]
+    cmds:
+    - ./bin/report
