@@ -6,13 +6,4 @@ tasks:
   build:
     cmds:
     - go build -o bin/generate ./generate
-
-  generate:
-    deps: [build]
-    cmds:
-    - ./bin/generate
-
-  report:
-    deps: [build]
-    cmds:
-    - ./bin/report
+    - go build -o bin/report ./report
